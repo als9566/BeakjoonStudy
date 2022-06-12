@@ -3,11 +3,11 @@ import java.util.*;
 public class BJ_2667 {
 	
 	static int N;
-	static int[][] homeArr; // Áöµµ¹è¿­
-	static int cnt = 0; // ´ÜÁö³» ÁıÀÇ ¼ö 
-	static boolean[][] visited; //¹æ¹®ÀúÀå ¹è¿­
-	static int[][] move = {{-1,0},{0,1},{0,-1},{1,0}}; //»óÇÏÁÂ¿ì
-	static ArrayList<Integer> dangelist = new ArrayList<>(); //°¢ ´ÜÁöÀÇ ÁıÀÇ ¼ö ¸®½ºÆ®
+	static int[][] homeArr; // ì§€ë„ë°°ì—´
+	static int cnt = 0; // ë‹¨ì§€ë‚´ ì§‘ì˜ ìˆ˜ 
+	static boolean[][] visited; //ë°©ë¬¸ì €ì¥ ë°°ì—´
+	static int[][] move = {{-1,0},{0,1},{0,-1},{1,0}}; //ìƒí•˜ì¢Œìš°
+	static ArrayList<Integer> dangelist = new ArrayList<>(); //ê° ë‹¨ì§€ì˜ ì§‘ì˜ ìˆ˜ ë¦¬ìŠ¤íŠ¸
 	
 	public static void main(String[] args) {
 		Scanner SC = new Scanner(System.in);
@@ -17,7 +17,7 @@ public class BJ_2667 {
 		homeArr = new int[N][N];
 		visited = new boolean[N][N];
 		
-		// ÁöµµÀÔ·Â
+		// ì§€ë„ì…ë ¥
 		for (int i = 0; i < N; i++) {
 			String temp = SC.next();
 			for (int j = 0; j < N; j++) {
