@@ -8,31 +8,31 @@ public class BJ10610 {
 		
 		Scanner SC = new Scanner(System.in);
 		
-		// N´Â ÃÖ´ë 10ÀÇ5½Â°³ÀÇ ¼ıÀÚ·Î ±¸¼ºµÇ¾îÀÖÀ¸¹Ç·Î
-		// String Å¸ÀÔÀ¸·Î ¹ŞÀ» ¼ö ¹Û¿¡ ¾ø´Ù.
+		// NëŠ” ìµœëŒ€ 10ì˜5ìŠ¹ê°œì˜ ìˆ«ìë¡œ êµ¬ì„±ë˜ì–´ìˆìœ¼ë¯€ë¡œ
+		// String íƒ€ì…ìœ¼ë¡œ ë°›ì„ ìˆ˜ ë°–ì— ì—†ë‹¤.
 		String N = SC.next();
-		// ¹ŞÀº ¼ıÀÚ¸¦ ´ãÀ» Integer ¹è¿­
+		// ë°›ì€ ìˆ«ìë¥¼ ë‹´ì„ Integer ë°°ì—´
 		Integer[] Arr = new Integer[N.length()];
 		
 		int sum = 0;
 		
-		// StringÀ¸·Î ¹ŞÀº ¼ıÀÚ¸¦ Integer¹è¿­¿¡ ´ã¾ÆÁØ´Ù.
+		// Stringìœ¼ë¡œ ë°›ì€ ìˆ«ìë¥¼ Integerë°°ì—´ì— ë‹´ì•„ì¤€ë‹¤.
 		for (int i = 0; i < Arr.length; i++) {
 			Arr[i] = Integer.parseInt(N.substring(i, i+1));
 			sum += Arr[i];
 		}
 		
-		// ³»¸²Â÷¼ø Á¤·Ä
+		// ë‚´ë¦¼ì°¨ìˆœ ì •ë ¬
 		Arrays.sort(Arr, Collections.reverseOrder());
 		
-		//1. ¸¶Áö¸· ÀÚ¸®¼ö°¡ 0ÀÌ ¾Æ´Ï¸é 30ÀÇ ¹è¼ö°¡ µÉ ¼ö ¾øÀ½.
-		//2. ¸ğµç ÀÚ¸®¼öÀÇ ÇÕÀÌ 3ÀÇ ¹è¼ö°¡ ¾Æ´Ï¸é 30ÀÇ ¹è¼ö°¡ µÉ ¼ö ¾øÀ½.
+		//1. ë§ˆì§€ë§‰ ìë¦¬ìˆ˜ê°€ 0ì´ ì•„ë‹ˆë©´ 30ì˜ ë°°ìˆ˜ê°€ ë  ìˆ˜ ì—†ìŒ.
+		//2. ëª¨ë“  ìë¦¬ìˆ˜ì˜ í•©ì´ 3ì˜ ë°°ìˆ˜ê°€ ì•„ë‹ˆë©´ 30ì˜ ë°°ìˆ˜ê°€ ë  ìˆ˜ ì—†ìŒ.
 		if (Arr[Arr.length-1] != 0 || sum % 3 != 0) {
 			System.out.println("-1");
 			return;
 		}
 		
-		// Ãâ·Â
+		// ì¶œë ¥
 		for (int i = 0; i < Arr.length; i++) {
 			System.out.print(Arr[i]);
 		}
