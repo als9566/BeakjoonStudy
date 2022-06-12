@@ -22,7 +22,7 @@ public class BJ_10026 {
 			}
 		}
 		
-		//¾Æ´Ñ»ç¶÷ÀÌ º¸À»¶§
+		//ì•„ë‹Œì‚¬ëŒì´ ë³´ì„ë•Œ
 		for (int i = 0; i < N; i++) {
 			for (int j = 0; j < N; j++) {
 				if (!visited[i][j]) {
@@ -33,7 +33,7 @@ public class BJ_10026 {
 		}
 		System.out.print(cnt);
 		
-		//Àû·Ï»ö¾àÀÎ »ç¶÷ÀÌ º¸´Â ±×¸²À» ¸¸µç´Ù.
+		//ì ë¡ìƒ‰ì•½ì¸ ì‚¬ëŒì´ ë³´ëŠ” ê·¸ë¦¼ì„ ë§Œë“ ë‹¤.
 		for (int i = 0; i < N; i++) {
 			for (int j = 0; j < N; j++) {
 				if(RGBIMG[i][j] == 'G') {
@@ -44,7 +44,7 @@ public class BJ_10026 {
 		
 		cnt = 0;
 		visited = new boolean[N][N];
-		//Àû·Ï»ö¾àÀÎ »ç¶÷ÀÌ º¸¾ÒÀ»¶§
+		//ì ë¡ìƒ‰ì•½ì¸ ì‚¬ëŒì´ ë³´ì•˜ì„ë•Œ
 		for (int i = 0; i < N; i++) {
 			for (int j = 0; j < N; j++) {
 				if (!visited[i][j]) {
