@@ -2,7 +2,7 @@ import java.util.*;
 
 public class BJ_1743 {
 
-	static boolean [][] arr; //���Ĺ� �迭
+	static boolean [][] arr; //À½½Ä¹° ¹è¿­
 	static int[][] move = {{-1,0},{1,0},{0,-1},{0,1}};
 	static boolean [][] visitied;
 	static int N,M,K;
