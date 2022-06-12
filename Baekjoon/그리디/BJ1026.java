@@ -4,7 +4,7 @@ public class BJ1026 {
 
 	public static void main(String[] args) {
 		
-		/* AÁ¤·Ä, B¿ª¼øÁ¤·Ä A[n]*B[n]À¸·ÎÇÑ ¹æ¹ı 
+		/* Aì •ë ¬, Bì—­ìˆœì •ë ¬ A[n]*B[n]ìœ¼ë¡œí•œ ë°©ë²• 
 		Scanner SC = new Scanner(System.in);
 		
 		int N = SC.nextInt();
@@ -28,10 +28,10 @@ public class BJ1026 {
 		}
 		
 		System.out.println(S);
-		  AÁ¤·Ä, B¿ª¼øÁ¤·Ä A[n]*B[n]À¸·ÎÇÑ ¹æ¹ı */
+		  Aì •ë ¬, Bì—­ìˆœì •ë ¬ A[n]*B[n]ìœ¼ë¡œí•œ ë°©ë²• */
 		
 		
-		/* B¿¡ÀÖ´Â ¼ö´Â Àç¹è¿­ÇÏ¸é ¾ÈµÈ´Ù´Â Á¶°ÇÀÇ ¹æ¹ı */
+		/* Bì—ìˆëŠ” ìˆ˜ëŠ” ì¬ë°°ì—´í•˜ë©´ ì•ˆëœë‹¤ëŠ” ì¡°ê±´ì˜ ë°©ë²• */
 		Scanner SC = new Scanner(System.in);
 		
 		int N = SC.nextInt();
@@ -51,7 +51,7 @@ public class BJ1026 {
 		
 		Arrays.sort(A);
 		
-		// 0µµÀÔ·Â ¹ŞÀ» ¼ö ÀÖ±â ¶§¹®¿¡ reArray = -1À¸·Î °ª º¯°æ
+		// 0ë„ì…ë ¥ ë°›ì„ ìˆ˜ ìˆê¸° ë•Œë¬¸ì— reArray = -1ìœ¼ë¡œ ê°’ ë³€ê²½
 		for (int i = 0; i < N; i++) {
 			reArray[i] = -1;
 		}
@@ -59,9 +59,9 @@ public class BJ1026 {
 		for (int i = 0; i < N; i++) {			
 			int max = -1;
 			int maxIndex = 0;
-			// ÃÖ´ë°ª ÀÎµ¦½º¸¦ Ã£´Â´Ù.
+			// ìµœëŒ€ê°’ ì¸ë±ìŠ¤ë¥¼ ì°¾ëŠ”ë‹¤.
 			for (int j = 0; j < N; j++) {
-				if (reArray[j] != -1) { // ¹èÄ¡°¡ ³¡³­ ÃÖ´ë°ªÀº Áö³ª°¨.
+				if (reArray[j] != -1) { // ë°°ì¹˜ê°€ ëë‚œ ìµœëŒ€ê°’ì€ ì§€ë‚˜ê°.
 					continue;
 				}
 				if(B[j] > max) {
@@ -69,7 +69,7 @@ public class BJ1026 {
 					maxIndex = j;
 				}
 			}
-			// ÃÖ´ë°ª ÀÎµ¦½º·Î AÃÖ¼Ò°ªÀÌ µé¾î°£´Ù
+			// ìµœëŒ€ê°’ ì¸ë±ìŠ¤ë¡œ Aìµœì†Œê°’ì´ ë“¤ì–´ê°„ë‹¤
 			reArray[maxIndex] = A[i];
 		}
 		
