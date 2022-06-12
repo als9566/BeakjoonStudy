@@ -6,24 +6,24 @@ public class BJ1541 {
 		
 		Scanner SC = new Scanner(System.in);
 		
-		//'-'·Î ±¸ºĞ
+		//'-'ë¡œ êµ¬ë¶„
 		String[] strArr = SC.nextLine().split("-");		
 	
-		//'-'·Î ±¸ºĞµÈ ½ÄÀ» °è»êÇÑ´Ù.
+		//'-'ë¡œ êµ¬ë¶„ëœ ì‹ì„ ê³„ì‚°í•œë‹¤.
 		for (int i = 0; i < strArr.length; i++) {
 			int tempSum = 0;
 			String[] tempArr =  strArr[i].split("\\+");
-			//'+'°è»ê ¹İº¹¹®
+			//'+'ê³„ì‚° ë°˜ë³µë¬¸
 			for (int j = 0; j < tempArr.length; j++) {
 				tempSum += Integer.parseInt(tempArr[j]);
 			}
 			strArr[i] = Integer.toString(tempSum);
 		}
 		
-		//°è»êµÈ °ªÀ» ¸¶ÀÌ³Ê½º(-)ÇØÁØ´Ù.
+		//ê³„ì‚°ëœ ê°’ì„ ë§ˆì´ë„ˆìŠ¤(-)í•´ì¤€ë‹¤.
 		int iValue = 0;
 		for (int i = 0; i < strArr.length; i++) {
-			if(i==0) //Ã¹¹øÂ°´Â ÇÃ·¯½º(+)ÇØ¾ßÇÔ
+			if(i==0) //ì²«ë²ˆì§¸ëŠ” í”ŒëŸ¬ìŠ¤(+)í•´ì•¼í•¨
 				iValue += Integer.parseInt(strArr[i]);
 			else
 				iValue -= Integer.parseInt(strArr[i]);
