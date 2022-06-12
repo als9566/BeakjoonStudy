@@ -2,9 +2,9 @@ import java.util.*;
 
 public class BJ_2178 {
 
-	static int[][] miro; //�̷ι迭
-	static boolean[][] visited; // �湮�迭
-	static int[][] move = {{-1,0},{0,-1},{1,0},{0,1}}; // �̵��迭
+	static int[][] miro; //미로배열
+	static boolean[][] visited; // 방문배열
+	static int[][] move = {{-1,0},{0,-1},{1,0},{0,1}}; // 이동배열
 	static int N,M;
 	
 	public static void main(String[] args) {
