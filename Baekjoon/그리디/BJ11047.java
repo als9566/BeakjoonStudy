@@ -10,7 +10,7 @@ public class BJ11047 {
 		
 		int[] coin = new int[N];
 		
-		//µ¿ÀüÀÇ Á¾·ù N°³¸¸Å­ ÀÔ·Â¹ŞÀ½
+		//ë™ì „ì˜ ì¢…ë¥˜ Nê°œë§Œí¼ ì…ë ¥ë°›ìŒ
 		for(int i = 0; i < N; i++) {
 			coin[i] = SC.nextInt();
 		}
