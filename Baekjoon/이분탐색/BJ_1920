@@ -1,0 +1,52 @@
+import java.util.*;
+
+public class BJ_1920 {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		
+		int N = sc.nextInt();
+		int[] A = new int[N]; //데이터 숫자배열
+		
+		for (int i = 0; i < N; i++) {
+			A[i] = sc.nextInt();
+		}
+		
+		int target_N = sc.nextInt();
+		int[] targat_Arr = new int[target_N]; //찾아야 하는 숫자배열
+		
+		for (int i = 0; i < target_N; i++) {
+			targat_Arr[i] = sc.nextInt();
+		}
+		
+		Arrays.sort(A);
+		
+		for (int i = 0; i < target_N; i++) {
+			boolean find = false;
+			int target = targat_Arr[i];
+			//이진탐색
+			int start = 0;
+			int end = A.length-1;
+			while(start <= end) {
+				int midi = (start+end)/2;
+				int midv = A[midi];
+				if( target > midv) {
+					start = midi+1;
+				} else if (target < midv) {
+					end = midi-1;
+				} else {
+					find = true;
+					break;
+				}
+			}
+			if (find == true) {
+				System.out.println("1");
+			} else {
+				System.out.println("0");
+			}
+		}
+		
+
+	}
+
+}
