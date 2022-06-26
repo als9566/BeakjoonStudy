@@ -30,7 +30,6 @@ public class BJ_2579 {
 			}
 		}
 		System.out.println(dp[n]);
-
 	}
 
 }
