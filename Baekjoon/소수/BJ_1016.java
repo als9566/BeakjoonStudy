@@ -4,24 +4,24 @@ public class BJ_1016 {
 
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
-		long Min = sc.nextLong(); // ÃÖ´ñ°ª
-		long Max = sc.nextLong(); // ÃÖ¼Ò°ª
-		// ÃÖ´ñ°ª°ú ÃÖ¼Ú°ªÀÇ Â÷ÀÌ¸¸Å­ ¹è¿­ ¼±¾ğ
+		long Min = sc.nextLong(); // ìµœëŒ“ê°’
+		long Max = sc.nextLong(); // ìµœì†Œê°’
+		// ìµœëŒ“ê°’ê³¼ ìµœì†Ÿê°’ì˜ ì°¨ì´ë§Œí¼ ë°°ì—´ ì„ ì–¸
 		boolean[] Check = new boolean[(int) (Max - Min + 1)];
-		// 2ÀÇ Á¦°ö¼öÀÎ 4ºÎÅÍ Maxº¸´Ù ÀÛ°Å³ª °ªÀº °ª±îÁö ¹İº¹
-		for (long i = 2; i * i <= Max; i++) {  // ´Ü¼ø Å½»öÀÌ ¾Æ´Ñ Á¦°ö¼ö ÇüÅÂ·Î Áõ°¡
-			long pow = i * i;               // Á¦°ö¼ö
+		// 2ì˜ ì œê³±ìˆ˜ì¸ 4ë¶€í„° Maxë³´ë‹¤ ì‘ê±°ë‚˜ ê°’ì€ ê°’ê¹Œì§€ ë°˜ë³µ
+		for (long i = 2; i * i <= Max; i++) {  // ë‹¨ìˆœ íƒìƒ‰ì´ ì•„ë‹Œ ì œê³±ìˆ˜ í˜•íƒœë¡œ ì¦ê°€
+			long pow = i * i;               // ì œê³±ìˆ˜
 			long start_index = Min / pow;
 			if (Min % pow != 0)
-				start_index++; // ³ª¸ÓÁö°¡ ÀÖÀ¸¸é 1À» ´õÇØ¾ß Minº¸´Ù Å« Á¦°ö¼ö¿¡¼­ ½ÃÀÛ
-			for (long j = start_index; pow * j <= Max; j++) { // Á¦°ö¼ö¸¦ true·Î º¯°æ
+				start_index++; // ë‚˜ë¨¸ì§€ê°€ ìˆìœ¼ë©´ 1ì„ ë”í•´ì•¼ Minë³´ë‹¤ í° ì œê³±ìˆ˜ì—ì„œ ì‹œì‘
+			for (long j = start_index; pow * j <= Max; j++) { // ì œê³±ìˆ˜ë¥¼ trueë¡œ ë³€ê²½
 				Check[(int) ((j * pow) - Min)] = true;  
 			}
 		}
 		int count = 0;
 		for (int i = 0; i <= Max - Min; i++) {
-			if (!Check[i]) { // Á¦°öÀÌ ¾Æ´Ï¶ó¸é
-				count++;     // count++
+			if (!Check[i]) { // ì œê³±ì´ ì•„ë‹ˆë¼ë©´
+				count++; // count++
 			}
 		}
 		System.out.println(count);
