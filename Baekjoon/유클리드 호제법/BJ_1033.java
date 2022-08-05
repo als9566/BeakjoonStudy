@@ -39,7 +39,7 @@ public class BJ_1033 {
 		}
 	}
 	
-	public static long gcd(long a, long b) { // ÃÖ´ë°ø¾à¼ö ÇÔ¼ö
+	public static long gcd(long a, long b) { // ìµœëŒ€ê³µì•½ìˆ˜ 
 		if (b == 0) 
 			return a;
 		else 
