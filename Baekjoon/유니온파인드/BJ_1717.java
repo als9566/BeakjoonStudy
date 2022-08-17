@@ -11,7 +11,7 @@ public class BJ_1717 {
 		int m = sc.nextInt();
 		parent = new int[n+1];
 		
-		for (int i = 1; i <= n; i++) {
+		for (int i = 1; i <= n; i++) { // 대표 노드를 자기 자신으로 초기화
 			parent[i] = i;
 		}
 		
@@ -19,9 +19,9 @@ public class BJ_1717 {
 			int gubun = sc.nextInt();
 			int a = sc.nextInt();
 			int b = sc.nextInt();
-			if (gubun == 0) {
+			if (gubun == 0) {     // 집합 합치기
 				union(a,b);
-			} else {
+			} else {              // 같은 집합의 원소인지 확인하기
 				if (checkSame(a,b)) {
 					System.out.println("YES");
 				} else {
@@ -31,7 +31,7 @@ public class BJ_1717 {
 		}
 	}
 	
-	public static void union(int a, int b) {
+	public static void union(int a, int b) { // union 연산 : 대표 노드끼리 연결
 		a = find(a);
 		b = find(b);
 		if (a != b) {
@@ -43,10 +43,10 @@ public class BJ_1717 {
 		if(a == parent[a]) 
 			return a;
 		else
-			return parent[a] = find(parent[a]);
+			return parent[a] = find(parent[a]); // 재귀 함수의 형태로 구현 -> 경로 압축 부분
 	}
 	
-	public static boolean checkSame(int a, int b) {
+	public static boolean checkSame(int a, int b) { // 두 원소가 같은 집합인지 확인
 		if (find(a) == find(b)) {
 			return true;
 		}
